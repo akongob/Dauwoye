@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page with Background Slideshow Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            height: 700px;
+            position: relative;
+            overflow:auto;
+        }
+        .header img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .header img.active {
+            opacity: 1;
+        }
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .header .overlay.active {
+            opacity: 1;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #cdf0a5;
+        }
+        .navbar a, .dropdown .dropbtn {
+            float: left;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            text-align:right;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            background-color: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 150px;
+            text-align: center;
+            background-color: #dbe9cd;
+        }
+        .elementor {
+            border: 1px solid #dddddd;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            background-color: rgb(255, 255, 255);
+        }
+        .circle {
+            border-radius: 50%;
+            width: 150px;
+            height:fit-content;
+        }
+        .rounded {
+            border-radius: 15px;
+            height: fit-content;
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        .footer div {
+            flex: 1;
+        }
+        .footer .left {
+            text-align: left;
+        }
+        .footer .center {
+            text-align: center;
+        }
+        .footer .right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn">ABOUT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Who We Are</a>
+                <a href="#">Our Team</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">OUR INFLUENCE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Our Campaigns</a>
+                <a href="#">Overview</a>
+            </div>
+        </div>
+        <a href="#">NEWS & UPDATES</a>
+        <a href="#">JOIN US</a>
+        <a href="#">CONTACT</a>
+    </div>
+<div class="header">
+    <img src="Dauwoye pics/Main office.jpeg" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>Our main office on the third floor at Masaba Building.</i></b></div>
+
+    <img src="Dauwoye pics/Dauwoye.jpg" alt="Slideshow Image 2">
+    <div class="overlay active"><b><i>Our CEO at the main office with a few members of our team.</i></b></div>
+
+    <img src="Dauwoye pics/dauwoye pic.jpg" alt="Slideshow Image 3">
+    <div class="overlay active"><b><i></i>These girls are beneficiaries of our dignity kit.</b></div>
+</div>
+
+<div class="content">
+    <div class="elementor circle">
+        <h2><b><i>Vision</i></b></h2>
+        <p>To be a center of reference in quality healthcare delivery and social-economical empowerment through partnership.</p>
+    </div>
+    <div class="elementor circle">
+        <h3><b><i>Our Values</i></b></h3>
+        <p>Integrity<br>Honesty<br>Transparency<br>Accountability<br>Collaboration and partnership</p>
+    </div>
+    <div class="elementor circle">
+        <h4><b><i>Mission</i></b></h4>
+        <p>To alleviate barriers in accessing comprehensive health services and promote quality healthcare delivery while creating socio-economic empowerment opportunities for the vulnerable.</p>
+    </div>
+    <h1><b>About Us</b></h1>
+    <p>DAUWOYE is an NGO...</p>
+    <div class="content">
+        <div class="elementor round" ></div><a href="women-empowerment.html" class="elementor">
+            <img src="Dauwoye pics/Woman.jfif">
+            <h2><b><i>Women Empowerment</i></b></h2>
+            <p style="color: rgb(71, 111, 187);">We advocate for women's rights and assistance by probonol lawyers who give services at no cost to the vulnerable groups, women facing domestic violence, inheritance disputes, and employment discrimination. We also campaign for laws and policies that protect and promote women's rights.</p>
+        </div>
+        <div class="elementor round">
+            <a href="youth-empowerment.html" class="elementor">
+            <img src="Dauwoye pics/Youth.jfif">
+            <h2><b><i>Youth Empowerment</i></b></h2>
+            <p></p>
+        </div>
+        <div class="elementor round">
+            <a href="health-program.html" class="elementor">
+            <img src="Dauwoye pics/Health.jpg">
+            <h2><b><i>Health Program<h2></h2>
+            </i></b></h2>
+            <p style="color: rgb(71, 111, 187);"></p>
+        </div>
+        <div class="elementor round">
+            <a href="advocacy-program.html" class="elementor">
+            <img src="Dauwoye pics/ADV.jfif">
+            <h2><b><i>Advocacy Program</i></b></h2>
+            <p style="color: rgb(71, 111, 187);"></p>
+        </div>
+        <div class="elementor round">
+            <a href="socio-economic.html" class="elementor">
+            <img src="Dauwoye pics/Social.jfif">
+            <h2><b><i>Socio-economic</i></b></h2>
+            <p style="color: rgb(71, 111, 187);">We train vulnerable  women and teenage mothers on how to develop business plans, understand market dynamics, and manage finances. We then offer small seed capital to enable them start their businesses. </p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="left">
+        <p><b>You Have Question?</b>></p>
+        <p><b>Call or Visit Us</b></p>
+        <p>+(254)722468422</p>
+        <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>
+        <p>info@dauwoye.org</p>
+    </div>
+    <div class="center">
+        <p>Center Aligned Text</p>
+    </div>
+    <div class="right">
+        <p>Right Aligned Text</p>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.header img');
+    const overlays = document.querySelectorAll('.header .overlay');
+    const totalImages = images.length;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        overlays[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add('active');
+        overlays[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+
+</body>
+</html>
