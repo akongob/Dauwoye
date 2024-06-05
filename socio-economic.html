@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Socio-economic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
@@ -104,17 +105,21 @@
             height: 600px;
             background-color:  #dbe9cd;
         }
-        .section {
-            flex: 1;
-            margin: 10px;
+        .elementor {
+            border: 1px solid #dddddd;
             padding: 20px;
-            height: 50px;
-            border: 1px solid #ddd;
+            height: fit-content;
+            margin: 10px;
+            display:inline-flex;
+            background-color: rgb(213, 240, 245);
             border-radius: 8px;
-            background-color: aliceblue;
+        }
+        .rounded {
+            border-radius: 15px;
+            height: fit-content;
         }
         .footer {
-            background-color: rgb(76, 175, 80);
+            background-color: rgb(205, 240, 165);
             color: rgb(0, 0, 0);
             display: flex;
             justify-content: space-between;
@@ -138,20 +143,46 @@
             text-decoration: none;
             font-size: 24px;
         }
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .subscribe-form input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .subscribe-form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #35426e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .subscribe-form input[type="submit"]:hover {
+            background-color: #ddd;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
 <div class="navbar">
     <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
-    <a href="#">HOME</a>
+    <a href="home.html">HOME</a>
     <div class="dropdown">
         <button class="dropbtn">ABOUT 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Who We Are</a>
-            <a href="#">Our Team</a>
+            <a href="who-we-are.html">Who We Are</a>
+            <a href="our-team.html">Our Team</a>
         </div>
     </div>
     <div class="dropdown">
@@ -159,8 +190,8 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Our Campaigns</a>
-            <a href="#">Overview</a>
+            <a href="our-campaigns.html">Our Campaigns</a>
+            <a href="overvieew.html">Overview</a>
         </div>
     </div>
     <div class="dropdown">
@@ -168,9 +199,9 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Our Partners</a>
-            <a href="#">Reports</a>
-            <a href="#">Blogs</a>
+            <a href="our-partners.html">Our Partners</a>
+            <a href="reports.html">Reports</a>
+            <a href="blogs.html">Blogs</a>
         </div>
     </div>
     <div class="dropdown">
@@ -178,13 +209,21 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Donate</a>
-            <a href="#">Partner With Us</a>
-            <a href="#">Vacancies</a>
-            <a href="#">Volunteer</a>
+            <a href="donate.html">Donate</a>
+            <a href="partner-with-us.html">Partner With Us</a>
+            <a href="vacancies.html">Vacancies</a>
+            <a href="volunteer.html">Volunteer</a>
         </div>
     </div>
-    <a href="#">CALL US</a>
+    <div class="dropdown">
+        <button class="dropbtn">CALL US 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">+(254)722468422</a>
+            <a href="#">@dauwoye.org.co.ke</a>
+        </div>
+    </div>
 </div>
 
 <div class="header">
@@ -199,17 +238,10 @@
 </div>
 
 <div class="main-content">
-    <div class="section" id="section1">
-        <h2><i>Women and Business</i></h2>
-        <p>Content for the first section goes here.</p>
-    </div>
-    <div class="section" id="section2">
-        <h2>Section 2</h2>
-        <p>Content for the second section goes here.</p>
-    </div>
-    <div class="section" id="section3">
-        <h2>Section 3</h2>
-        <p>Content for the third section goes here.</p>
+    <div class="elementor round">
+        <img src="Dauwoye pics/Youth.jfif" alt="Youth Program">
+        <h2><i>Entrepreneurship</i></h2>
+        <p>We identify vulnerable youths, mostly teenage mothers who access training and mentorship on entrepreneurship. Later on, they are given seed capital to attain self reliance.</p>
     </div>
 </div>
 
@@ -224,15 +256,21 @@
     <div class="center">
         <p><b>Newsletter</b></p>
         <p>Get the latest news</p>
+        <div class="subscribe-form">
+            <form action="subscribe.html">
+                <input type="email" placeholder="Enter your email" required>
+                <input type="submit" value="Subscribe" style="background-color: aquamarine;">
+            </form>
+        </div>
     </div>
     <div class="right">
         <p><b>Connect With Us</b></p>
-    </div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/dauwoye.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/dauwoye?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/watch?v=MtDtSNKzMEc" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/dauwoye-org-b72256133/?originalSubdomain=ke" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/dauwoye.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/dauwoye?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=MtDtSNKzMEc" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dauwoye-org-b72256133/?originalSubdomain=ke" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
     </div>
 </div>
 

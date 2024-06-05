@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Women Empowerment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
@@ -97,24 +98,28 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .main-content {
+        .content {
             display: flex;
             justify-content: space-between;
             padding: 20px;
             height: 600px;
             background-color:  #dbe9cd;
         }
-        .section {
-            flex: 1;
-            margin: 10px;
+        .elementor {
+            border: 1px solid #dddddd;
             padding: 20px;
-            height: 50px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: aliceblue;
+            height: fit-content;
+            margin:auto;
+            display:inline-flexbox;
+            background-color: rgb(213, 240, 245);
+            border-radius: initial;
+        }
+        .rounded {
+            border-radius: 15px;
+            height: fit-content;
         }
         .footer {
-            background-color: rgb(76, 175, 80);
+            background-color: rgb(205, 240, 165);
             color: rgb(0, 0, 0);
             display: flex;
             justify-content: space-between;
@@ -133,25 +138,51 @@
             text-align: right;
         }
         .social-icons a {
-            color: rgb(116, 147, 192);
+            color: rgb(248, 249, 252);
             margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
         }
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .subscribe-form input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .subscribe-form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #35426e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .subscribe-form input[type="submit"]:hover {
+            background-color: #ddd;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
 <div class="navbar">
     <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
-    <a href="#">HOME</a>
+    <a href="home.html">HOME</a>
     <div class="dropdown">
         <button class="dropbtn">ABOUT 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Who We Are</a>
-            <a href="#">Our Team</a>
+            <a href="who-we-are.html">Who We Are</a>
+            <a href="our-team.html">Our Team</a>
         </div>
     </div>
     <div class="dropdown">
@@ -159,8 +190,8 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Our Campaigns</a>
-            <a href="#">Overview</a>
+            <a href="our-campaigns.html">Our Campaigns</a>
+            <a href="overview.html">Overview</a>
         </div>
     </div>
     <div class="dropdown">
@@ -168,9 +199,9 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Our Partners</a>
-            <a href="#">Reports</a>
-            <a href="#">Blogs</a>
+            <a href="our-partners.html">Our Partners</a>
+            <a href="reports.html">Reports</a>
+            <a href="blogs.html">Blogs</a>
         </div>
     </div>
     <div class="dropdown">
@@ -178,13 +209,21 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="#">Donate</a>
-            <a href="#">Partner With Us</a>
-            <a href="#">Vacancies</a>
-            <a href="#">Volunteer</a>
+            <a href="donate.html">Donate</a>
+            <a href="partner-with-us.html">Partner With Us</a>
+            <a href="vacancies.html">Vacancies</a>
+            <a href="volunteer.html">Volunteer</a>
         </div>
     </div>
-    <a href="#">CALL US</a>
+    <div class="dropdown">
+        <button class="dropbtn">CALL US 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">+(254)722468422</a>
+            <a href="#">@dauwoye.org.co.ke</a>
+        </div>
+    </div>
 </div>
 
 <div class="header">
@@ -194,22 +233,23 @@
     <img src="Dauwoye pics/Lab Tech.jpeg" alt="Slideshow Image 2">
     <div class="overlay active"><b><i></i></b></div>
 
-    <img src="Dauwoye pics/dauwoye women.jpg" alt="Slideshow Image 3">
-    <div class="overlay active"><b><i></i></b></div>
 </div>
 
-<div class="main-content">
-    <div class="section" id="section1">
+<div class="content">
+    <div class="elementor round">
+        <img src="Dauwoye pics/Mama mboga.jpg" alt="Mama mboga at her stall">
         <h2><i>Women and Business</i></h2>
-        <p>Content for the first section goes here.</p>
+        <p>We empower women economically by giving them seed capital after training and mentorship. They can run projects like chicken rearing and kitchen gardens, which earns them income. Through this, they will be able to afford a balanced diet hence achieving nutritional stability.</p>
     </div>
-    <div class="section" id="section2">
-        <h2>Section 2</h2>
-        <p>Content for the second section goes here.</p>
+    <div class="elementor round">
+        <img src="Dauwoye pics/Ladies studying.jpg" alt="Young women in school">
+        <h2>Women and Education</h2>
+        <p>We identify vulnerable teenage mothers who want to go back to school, we partner with other stakeholders to mitigate the effects of vulnerability by offering uniforms, scholarships through organizations like CDF for bursaries and children department for family support and others.</p>
     </div>
-    <div class="section" id="section3">
-        <h2>Section 3</h2>
-        <p>Content for the third section goes here.</p>
+    <div class="elementor round">
+        <img src="Dauwoye pics/Healthy woman.jpg" alt="A woman receiving atenatal care">
+        <h2>Healthy Women</h2>
+        <p>We champion for reproductive health in women by encouraging them to use various family planning methods.</p>
     </div>
 </div>
 
@@ -224,15 +264,21 @@
     <div class="center">
         <p><b>Newsletter</b></p>
         <p>Get the latest news</p>
+        <div class="subscribe-form">
+            <form action="subscribe.html">
+                <input type="email" placeholder="Enter your email" required>
+                <input type="submit" value="Subscribe" style="background-color: aquamarine;">
+            </form>
+        </div>
     </div>
     <div class="right">
         <p><b>Connect With Us</b></p>
-    </div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/dauwoye.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/dauwoye?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/watch?v=MtDtSNKzMEc" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/dauwoye-org-b72256133/?originalSubdomain=ke" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/dauwoye.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/dauwoye?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=MtDtSNKzMEc" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dauwoye-org-b72256133/?originalSubdomain=ke" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
     </div>
 </div>
 

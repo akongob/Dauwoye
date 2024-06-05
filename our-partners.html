@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Health Program</title>
+    <title>Our Partners</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -12,14 +12,14 @@
         .header {
             height: 700px;
             position: relative;
-            overflow: hidden;
+            overflow:auto;
         }
         .header img {
             width: 100%;
             height: 100%;
             position: absolute;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition:ease-in-out;
         }
         .header img.active {
             opacity: 1;
@@ -44,8 +44,7 @@
         }
         .navbar {
             overflow: hidden;
-            background-color: rgb(205, 240, 165);
-            align-items: baseline;
+            background-color: #cdf0a5;
         }
         .navbar img {
             height: 50px; /* Adjust as needed */
@@ -97,27 +96,22 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
-        }
-        .main-content {
-            background: url('Dauwoye pics/Reception.jpeg') no-repeat center fixed;
-            display: flex;
+        }    
+        .content {
+            display:flexbox;
             justify-content: space-between;
             padding: 20px;
             height: 600px;
-            background-color:  #dbe9cd;
+            background-color: #dbe9cd;
         }
         .elementor {
             border: 1px solid #dddddd;
             padding: 20px;
             height: fit-content;
-            margin: 10px;
-            display: inline-block;
+            margin: 5px;
+            display:flex;
             background-color: rgb(213, 240, 245);
-            border-radius: 8px;
-        }
-        .rounded {
-            border-radius: 15px;
-            height: fit-content;
+            border-radius: initial;
         }
         .footer {
             background-color: rgb(205, 240, 165);
@@ -174,74 +168,83 @@
 </head>
 <body>
 
-<div class="navbar">
-    <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
-    <a href="home.html">HOME</a>
-    <div class="dropdown">
-        <button class="dropbtn">ABOUT 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="who-we-are.html">Who We Are</a>
-            <a href="our-team.html">Our Team</a>
+    <div class="navbar">
+        <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
+        <a href="home.html">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn">ABOUT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="who-we-are.html">Who We Are</a>
+                <a href="our-team.html">Our Team</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">OUR INFLUENCE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our.campaigns.html">Our Campaigns</a>
+                <a href="overview.html">Overview</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">NEWS & UPDATES 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-partners.html">Our Partners</a>
+                <a href="reports.html">Reports</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">GET INVOLVED 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="donate.html">Donate</a>
+                <a href="partner-with-us.html">Partner With Us</a>
+                <a href="vacancies.html">Vacancies</a>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">CALL US 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">+(254)722468422</a>
+            </div>
         </div>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn">OUR INFLUENCE 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our.campaigns.html">Our Campaigns</a>
-            <a href="overview.html">Overview</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">NEWS & UPDATES 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our-partners.html">Our Partners</a>
-            <a href="reports.html">Reports</a>
-            <a href="blogs.html">Blogs</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">GET INVOLVED 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="donate.html">Donate</a>
-            <a href="partner-with-us.html">Partner With Us</a>
-            <a href="vacancies.html">Vacancies</a>
-            <a href="volunteer.html">Volunteer</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">CALL US 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">+(254)722468422</a>
-        </div>
-    </div>
-</div>
 
-<div class="header">
-    <img src="Dauwoye pics/Ward.jpeg" class="active" alt="Slideshow Image 1">
-    <div class="overlay active"><b><i>We have several wards in our clinics where we admit our patients.<br>The wards help us monitor patients that need our attention.</i></b></div>
     
-    <img src="Dauwoye pics/Child Vaccination.jpeg" alt="Slideshow Image 2">
-    <div class="overlay active"><b><i>A client receiving treatment in one of our clinics. </i></b></div>
-
-    <img src="Dauwoye pics/Lab Tech.jpeg" alt="Slideshow Image 3">
-    <div class="overlay active"><b><i></i></b></div>
+<div class="header">
+    <img src="Dauwoye pics/women campaign.jpg" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>Daraja Umited Women and Youth Empowerment<br>(DAUWOYE)</i></b></div>
+    
 </div>
 
-<div class="main-content">
+<div class="content">
     <div class="elementor round">
-        <img src="Dauwoye pics/Woman.jfif">
-        <h2><i>Medical Health</i></h2>
-        <p>As an organization, we have one health facility with her annex, which offer medical services where we provide treatment of basic illness. These are for income generation and sustainability.</p>
+        <h2 style="text-align: center;"><i style="color: rgb(77, 185, 204);">Partners</i></h2>
+        <p>Futures Group International</p>
+        <p>Population Services International</p>
+        <p>Pact Kenya</p>
+        <p>Umande Twist</p>
+        <p>National AIDS Control Council</p>
+        <p>Planned Parenthood Global</p>
+        <p>Kenya Redcross</p>
+        <p>Aga Khan Foundation</p>
+        <p>Triggerise</p>
+    </div>
+    <div class="elementor round">
+        <h2 style="text-align: center;"><i style="color: rgb(77, 185, 204);">Collaborators</i></h2>
+        <p>Ministry of Health</p>
+        <p>NGO Council</p>
+        <p>NGO Co-ordination Board</p>
     </div>
 </div>
 
