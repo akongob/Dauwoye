@@ -12,14 +12,14 @@
         .header {
             height: 700px;
             position: relative;
-            overflow: hidden;
+            overflow:auto;
         }
         .header img {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position:absolute;
             opacity: 0;
-            transition:ease-in-out;
+            transition:all;
         }
         .header img.active {
             opacity: 1;
@@ -35,7 +35,7 @@
             align-items: center;
             color: rgb(255, 255, 255);
             font-size: 24px;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(61, 61, 61, 0.5);
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -44,8 +44,7 @@
         }
         .navbar {
             overflow: hidden;
-            background-color: rgb(205, 240, 165);
-            align-items: baseline;
+            background-color: #cdf0a5;
         }
         .navbar img {
             height: 50px; /* Adjust as needed */
@@ -60,7 +59,7 @@
             text-decoration: none;
         }
         .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
+            background-color: #ffffff;
             color: black;
         }
         .dropdown {
@@ -98,21 +97,24 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .main-content {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            height: 600px;
+        .content {
+            padding: 150px;
+            text-align: center;
             background-color:  #dbe9cd;
         }
         .elementor {
             border: 1px solid #dddddd;
             padding: 20px;
-            height: fit-content;
             margin: 10px;
-            display: inline-flex;
+            display:flex;
             background-color: rgb(213, 240, 245);
-            border-radius: 8px;
+            text-decoration:none;
+        }
+        .circle {
+            border-radius: 100%;
+            width: 150px;
+            height:fit-content;
+            display: inline-block;
         }
         .rounded {
             border-radius: 15px;
@@ -138,7 +140,7 @@
             text-align: right;
         }
         .social-icons a {
-            color: rgb(116, 147, 192);
+            color: rgb(97, 121, 196);
             margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
@@ -173,72 +175,70 @@
 </head>
 <body>
 
-<div class="navbar">
-    <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
-    <a href="home.html">HOME</a>
-    <div class="dropdown">
-        <button class="dropbtn">ABOUT 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="who-we-are.html">Who We Are</a>
-            <a href="our-team.html">Our Team</a>
+    <div class="navbar">
+        <img src="Dauwoye pics/logo.jpeg" alt="Logo">
+        <a href="home.html">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn">ABOUT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="who-we-are.html">Who We Are</a>
+                <a href="our-team.html">Our Team</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">OUR INFLUENCE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-campaigns.html">Our Campaigns</a>
+                <a href="overview.html">Overview</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">NEWS & UPDATES 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-partners.html">Our Partners</a>
+                <a href="reports.html">Reports</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">GET INVOLVED 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="donate.html">Donate</a>
+                <a href="partner-with-us.html">Partner With Us</a>
+                <a href="vacancies.html">Vacancies</a>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">CALL US 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">+(254)722468422</a>
+                <a href="#">@dauwoye.org.co.ke</a>
+            </div>
         </div>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn">OUR INFLUENCE 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our-campaignjs.html">Our Campaigns</a>
-            <a href="overview.html">Overview</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">NEWS & UPDATES 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our-partners.html">Our Partners</a>
-            <a href="reports.html">Reports</a>
-            <a href="blogs.html">Blogs</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">GET INVOLVED 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="donate.html">Donate</a>
-            <a href="partner-with-us.html">Partner With Us</a>
-            <a href="vacancies.html">Vacancies</a>
-            <a href="volunteer.html">Volunteer</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">CALL US 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">+(254)722468422</a>
-        </div>
-    </div>
-</div>
-
 <div class="header">
-    <img src="Dauwoye pics/women campaign.jpg" class="active" alt="Slideshow Image 1">
-    <div class="overlay active"><b><i></i></b></div>
+    <img src="Dauwoye pics/Youth protest.jfif" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>We believe that the youths have rights and their voices should be heard.</i></b></div>
+    
+    <img src="Dauwoye pics/Ladies' rights.jfif" alt="Slideshow Image 2">
+    <div class="overlay active"><b><i>Young women are our priority and we lead them to persons that fight <br>for their rights in the society. </i></b></div>
 
-    <img src="Dauwoye pics/Lab Tech.jpeg" alt="Slideshow Image 2">
-    <div class="overlay active"><b><i></i></b></div>
-
-    <img src="Dauwoye pics/dauwoye women.jpg" alt="Slideshow Image 3">
-    <div class="overlay active"><b><i></i></b></div>
 </div>
 
-<div class="main-content">
+<div class="content">
     <div class="elementor round">
-        <img src="Dauwoye pics/Woman.jfif">
+        <img src="Dauwoye pics/Rights.jpg">
         <h2><i>Advocacy and Lobbying</i></h2>
         <p>Through capacity building, we champion for laws and policies that accommodate women's views and are co-opted on decision-making. We educate the youths and girls to know and make use of their rights. We do mobilisation at the grassroots through communiy outreaches to raise awareness. We collaborate and network with other organizatios like the Human Rights Organizations to amplify the voices of women and youths.</p>
     </div>
@@ -246,7 +246,7 @@
 
 <div class="footer">
     <div class="left">
-        <p><b>You Have Question?</b>></p>
+        <p><b>You Have Question?</b></p>
         <p><b>Call or Visit Us</b></p>
         <p>+(254)722468422</p>
         <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>
@@ -276,12 +276,15 @@
 <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('.header img');
+    const overlays = document.querySelectorAll('.header .overlay');
     const totalImages = images.length;
 
     function showNextImage() {
         images[currentIndex].classList.remove('active');
+        overlays[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % totalImages;
         images[currentIndex].classList.add('active');
+        overlays[currentIndex].classList.add('active');
     }
 
     setInterval(showNextImage, 3000); // Change image every 3 seconds

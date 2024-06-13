@@ -12,14 +12,14 @@
         .header {
             height: 700px;
             position: relative;
-            overflow: hidden;
+            overflow:auto;
         }
         .header img {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position:absolute;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition:all;
         }
         .header img.active {
             opacity: 1;
@@ -35,7 +35,7 @@
             align-items: center;
             color: rgb(255, 255, 255);
             font-size: 24px;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(61, 61, 61, 0.5);
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -44,8 +44,7 @@
         }
         .navbar {
             overflow: hidden;
-            background-color: rgb(205, 240, 165);
-            align-items: baseline;
+            background-color: #cdf0a5;
         }
         .navbar img {
             height: 50px; /* Adjust as needed */
@@ -60,7 +59,7 @@
             text-decoration: none;
         }
         .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
+            background-color: #ffffff;
             color: black;
         }
         .dropdown {
@@ -98,22 +97,25 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .main-content {
-            background: url('Dauwoye pics/Reception.jpeg') no-repeat center fixed;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            height: 600px;
+        .content {
+            background:url('Dauwoye pics/lab.jpeg') no-repeat center fixed;
+            padding: 150px;
+            text-align: center;
             background-color:  #dbe9cd;
         }
         .elementor {
             border: 1px solid #dddddd;
             padding: 20px;
-            height: fit-content;
             margin: 10px;
             display: inline-block;
             background-color: rgb(213, 240, 245);
-            border-radius: 8px;
+            text-decoration:none;
+        }
+        .circle {
+            border-radius: 100%;
+            width: 150px;
+            height:fit-content;
+            display: inline-block;
         }
         .rounded {
             border-radius: 15px;
@@ -139,7 +141,7 @@
             text-align: right;
         }
         .social-icons a {
-            color: rgb(116, 147, 192);
+            color: rgb(97, 121, 196);
             margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
@@ -174,72 +176,72 @@
 </head>
 <body>
 
-<div class="navbar">
-    <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
-    <a href="home.html">HOME</a>
-    <div class="dropdown">
-        <button class="dropbtn">ABOUT 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="who-we-are.html">Who We Are</a>
-            <a href="our-team.html">Our Team</a>
+    <div class="navbar">
+        <img src="Dauwoye pics/logo.jpeg" alt="Logo">
+        <a href="home.html">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn">ABOUT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="who-we-are.html">Who We Are</a>
+                <a href="our-team.html">Our Team</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">OUR INFLUENCE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-campaigns.html">Our Campaigns</a>
+                <a href="overview.html">Overview</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">NEWS & UPDATES 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-partners.html">Our Partners</a>
+                <a href="reports.html">Reports</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">GET INVOLVED 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="donate.html">Donate</a>
+                <a href="partner-with-us.html">Partner With Us</a>
+                <a href="vacancies.html">Vacancies</a>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">CALL US 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">+(254)722468422</a>
+                <a href="#">@dauwoye.org.co.ke</a>
+            </div>
         </div>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn">OUR INFLUENCE 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our.campaigns.html">Our Campaigns</a>
-            <a href="overview.html">Overview</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">NEWS & UPDATES 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our-partners.html">Our Partners</a>
-            <a href="reports.html">Reports</a>
-            <a href="blogs.html">Blogs</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">GET INVOLVED 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="donate.html">Donate</a>
-            <a href="partner-with-us.html">Partner With Us</a>
-            <a href="vacancies.html">Vacancies</a>
-            <a href="volunteer.html">Volunteer</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">CALL US 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">+(254)722468422</a>
-        </div>
-    </div>
-</div>
-
 <div class="header">
-    <img src="Dauwoye pics/Ward.jpeg" class="active" alt="Slideshow Image 1">
+    <img src="Dauwoye pics/Wards.jpeg" class="active" alt="Slideshow Image 1">
     <div class="overlay active"><b><i>We have several wards in our clinics where we admit our patients.<br>The wards help us monitor patients that need our attention.</i></b></div>
     
-    <img src="Dauwoye pics/Child Vaccination.jpeg" alt="Slideshow Image 2">
+    <img src="Dauwoye pics/Patient kid.jpeg" alt="Slideshow Image 2">
     <div class="overlay active"><b><i>A client receiving treatment in one of our clinics. </i></b></div>
 
     <img src="Dauwoye pics/Lab Tech.jpeg" alt="Slideshow Image 3">
-    <div class="overlay active"><b><i></i></b></div>
+    <div class="overlay active"><b><i>A lab tehnician at one of our clinics in Kisii town.</i></b></div>
 </div>
 
-<div class="main-content">
+<div class="content">
     <div class="elementor round">
-        <img src="Dauwoye pics/Woman.jfif">
+        <img src="Dauwoye pics/Med drugs.jpg">
         <h2><i>Medical Health</i></h2>
         <p>As an organization, we have one health facility with her annex, which offer medical services where we provide treatment of basic illness. These are for income generation and sustainability.</p>
     </div>
@@ -247,7 +249,7 @@
 
 <div class="footer">
     <div class="left">
-        <p><b>You Have Question?</b>></p>
+        <p><b>You Have Question?</b></p>
         <p><b>Call or Visit Us</b></p>
         <p>+(254)722468422</p>
         <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>
@@ -277,12 +279,15 @@
 <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('.header img');
+    const overlays = document.querySelectorAll('.header .overlay');
     const totalImages = images.length;
 
     function showNextImage() {
         images[currentIndex].classList.remove('active');
+        overlays[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % totalImages;
         images[currentIndex].classList.add('active');
+        overlays[currentIndex].classList.add('active');
     }
 
     setInterval(showNextImage, 3000); // Change image every 3 seconds

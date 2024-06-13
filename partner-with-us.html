@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Partner With Us</title>
+    <title>Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -17,9 +17,9 @@
         .header img {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position:absolute;
             opacity: 0;
-            transition:ease-in-out;
+            transition:all;
         }
         .header img.active {
             opacity: 1;
@@ -35,7 +35,7 @@
             align-items: center;
             color: rgb(255, 255, 255);
             font-size: 24px;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(61, 61, 61, 0.5);
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -59,7 +59,7 @@
             text-decoration: none;
         }
         .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
+            background-color: #ffffff;
             color: black;
         }
         .dropdown {
@@ -96,26 +96,49 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
-        }    
+        }
         .content {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            height: 600px;
+            padding: 150px;
+            text-align: center;
+            background-color:  #ffffff;
         }
-        .elementor {
-            border: 1px solid #dddddd;
-            padding: 20px;
-            height:fit-content;
-            width:fit-content;
-            margin: 10px;
-            display: inline-block;
+        .form-container {
             background-color: rgb(213, 240, 245);
-            text-decoration: none;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
         }
-        .rounded {
-            border-radius: 15px;
-            height: fit-content;
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="date"],
+        .form-container input[type="address"],
+        .form-container input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100px;
+            padding: 5px 10px;
+            margin: 10px 0;
+            background-color: #35426e;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #b8e994;
         }
         .footer {
             background-color: rgb(205, 240, 165);
@@ -137,7 +160,7 @@
             text-align: right;
         }
         .social-icons a {
-            color: rgb(116, 147, 192);
+            color: rgb(97, 121, 196);
             margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
@@ -173,7 +196,7 @@
 <body>
 
     <div class="navbar">
-        <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
+        <img src="Dauwoye pics/logo.jpeg" alt="Logo">
         <a href="home.html">HOME</a>
         <div class="dropdown">
             <button class="dropbtn">ABOUT 
@@ -189,7 +212,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="our.campaigns.html">Our Campaigns</a>
+                <a href="our-campaigns.html">Our Campaigns</a>
                 <a href="overview.html">Overview</a>
             </div>
         </div>
@@ -224,24 +247,34 @@
             </div>
         </div>
     </div>
-
-    
 <div class="header">
-    <img src="Dauwoye pics/women campaign.jpg" class="active" alt="Slideshow Image 1">
-    <div class="overlay active"><b><i>Daraja Umited Women and Youth Empowerment<br>(DAUWOYE)</i></b></div>
-    
+    <img src="Dauwoye pics/Redcross.png" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>We have worked with the Kenya Redcross for quite a long time.</i></b></div>
+
+    <img src="Dauwoye pics/khan.png" alt="Slideshow Image 2">
+    <div class="overlay active"><b><i>Aga Khan Foundation has enabled us achieve our goals for a long period of time.</i></b></div>
+
 </div>
 
 <div class="content">
-    <div class="elementor round">
-        <h2><b><i>About Us</i></b></h2>
-        <p >Daraja United Women and Youth Empowerment is a Kenyan, women/youth – led national NGO focused on women and youth empowerment. We work in the rural areas of Kisii and Nyamira counties in Kenya.</p>
+    <div class="form-container">
+        <h2 style="color: rgb(116, 147, 192);"><i>Volunteer Sign-Up</i></h2>
+        <form action="/submit_volunteer_form" method="post">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="date" name="date" placeholder="Date of Birth" required>
+            <input type="address" name="address" placeholder="Address" required>
+            <input type="text" name="company" placeholder="Company" required>
+            <button type="submit">SUBMIT</button>
+        </form>
     </div>
 </div>
 
 <div class="footer">
     <div class="left">
-        <p><b>You Have Question?</b>></p>
+        <p><b>You Have Question?</b></p>
         <p><b>Call or Visit Us</b></p>
         <p>+(254)722468422</p>
         <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>
@@ -271,12 +304,15 @@
 <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('.header img');
+    const overlays = document.querySelectorAll('.header .overlay');
     const totalImages = images.length;
 
     function showNextImage() {
         images[currentIndex].classList.remove('active');
+        overlays[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % totalImages;
         images[currentIndex].classList.add('active');
+        overlays[currentIndex].classList.add('active');
     }
 
     setInterval(showNextImage, 3000); // Change image every 3 seconds

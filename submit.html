@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Socio-economic</title>
+    <title>Submit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -17,9 +17,8 @@
         .header img {
             width: 100%;
             height: 100%;
-            position:absolute;
+            position: absolute;
             opacity: 0;
-            transition:all;
         }
         .header img.active {
             opacity: 1;
@@ -35,7 +34,7 @@
             align-items: center;
             color: rgb(255, 255, 255);
             font-size: 24px;
-            background: rgba(61, 61, 61, 0.5);
+            background: rgba(0, 0, 0, 0.5);
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -47,7 +46,7 @@
             background-color: #cdf0a5;
         }
         .navbar img {
-            height: 50px; /* Adjust as needed */
+            height: 50px; 
             margin: 5px 20px;
         }
         .navbar a, .dropdown .dropbtn {
@@ -96,29 +95,18 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
-        }
+        }    
         .content {
-            padding: 150px;
-            text-align: center;
-            background-color:  #dbe9cd;
-        }
-        .elementor {
-            border: 1px solid #dddddd;
+            display: flex;
+            justify-content: space-between;
             padding: 20px;
-            margin: 10px;
-            display:inline-flexbox;
-            background-color: rgb(213, 240, 245);
-            text-decoration:none;
+            height: 600px;
         }
-        .circle {
-            border-radius: 100%;
-            width: 150px;
-            height:fit-content;
+        .success-message {
             display: inline-block;
-        }
-        .rounded {
-            border-radius: 15px;
-            height: fit-content;
+            text-align: center;
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
         }
         .footer {
             background-color: rgb(205, 240, 165);
@@ -140,7 +128,7 @@
             text-align: right;
         }
         .social-icons a {
-            color: rgb(97, 121, 196);
+            color: rgb(116, 147, 192);
             margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
@@ -192,7 +180,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="our-campaigns.html">Our Campaigns</a>
+                <a href="our.campaigns.html">Our Campaigns</a>
                 <a href="overview.html">Overview</a>
             </div>
         </div>
@@ -227,21 +215,15 @@
             </div>
         </div>
     </div>
-<div class="header">
-    <img src="Dauwoye pics/Business women.jpg" class="active" alt="Slideshow Image 1">
-    <div class="overlay active"><b><i>We identify vulnerable women in the society, take them through financial <br>training, and at the end ggive them seed capital to start up a business.</i></b></div>
-    
-    <img src="Dauwoye pics/Paultry.jfif" alt="Slideshow Image 2">
-    <div class="overlay active"><b><i>DAUWOYE does a follow up on the women they empower to ensure <br>that they do no lag and improve their lives and that of their families.</i></b></div>
 
+    
+<div class="header">
+    <img src="Dauwoye pics/Team building.jpg" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>Volunteer to work with us.</i></b></div>
 </div>
 
 <div class="content">
-    <div class="elementor round">
-        <img src="Dauwoye pics/Training youths.jfif" alt="Youth Program">
-        <h2><i>Entrepreneurship</i></h2>
-        <p>We identify vulnerable youths (mostly teenage mothers) and women who access training and mentorship on entrepreneurship. Later on, they are given seed capital to attain self reliance.</p>
-    </div>
+    
 </div>
 
 <div class="footer">
@@ -276,15 +258,12 @@
 <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('.header img');
-    const overlays = document.querySelectorAll('.header .overlay');
     const totalImages = images.length;
 
     function showNextImage() {
         images[currentIndex].classList.remove('active');
-        overlays[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % totalImages;
         images[currentIndex].classList.add('active');
-        overlays[currentIndex].classList.add('active');
     }
 
     setInterval(showNextImage, 3000); // Change image every 3 seconds

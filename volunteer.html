@@ -58,7 +58,7 @@
             text-decoration: none;
         }
         .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
+            background-color: #ffffff;
             color: black;
         }
         .dropdown {
@@ -102,19 +102,47 @@
             padding: 20px;
             height: 600px;
         }
-        .elementor {
-            border: 1px solid #dddddd;
-            padding: 20px;
-            height:fit-content;
-            width:fit-content;
-            margin: 10px;
-            display: inline-block;
+        .form-container {
             background-color: rgb(213, 240, 245);
-            text-decoration: none;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
         }
-        .rounded {
-            border-radius: 15px;
-            height: fit-content;
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100px;
+            padding: 5px 10px;
+            margin: 10px 0;
+            background-color: #35426e;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #b8e994;
+        }
+        .success-message {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
         }
         .footer {
             background-color: rgb(205, 240, 165);
@@ -172,7 +200,7 @@
 <body>
 
     <div class="navbar">
-        <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
+        <img src="Dauwoye pics/logo.jpeg" alt="Logo">
         <a href="home.html">HOME</a>
         <div class="dropdown">
             <button class="dropbtn">ABOUT 
@@ -226,21 +254,27 @@
 
     
 <div class="header">
-    <img src="Dauwoye pics/women campaign.jpg" class="active" alt="Slideshow Image 1">
-    <div class="overlay active"><b><i>Daraja Umited Women and Youth Empowerment<br>(DAUWOYE)</i></b></div>
-    
+    <img src="Dauwoye pics/Team building.jpg" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>Volunteer to work with us.</i></b></div>
 </div>
 
 <div class="content">
-    <div class="elementor round">
-        <h2><b><i>About Us</i></b></h2>
-        <p >Daraja United Women and Youth Empowerment is a Kenyan, women/youth – led national NGO focused on women and youth empowerment. We work in the rural areas of Kisii and Nyamira counties in Kenya.</p>
+    <div class="form-container">
+        <h2 style="color: rgb(116, 147, 192);"><i>Volunteer Sign-Up</i></h2>
+        <form action="/submit_volunteer_form" method="post">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="occupation" placeholder="Occupation" required>
+            <button type="submit">SUBMIT</button>
+        </form>
     </div>
 </div>
 
 <div class="footer">
     <div class="left">
-        <p><b>You Have Question?</b>></p>
+        <p><b>You Have Question?</b></p>
         <p><b>Call or Visit Us</b></p>
         <p>+(254)722468422</p>
         <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>

@@ -12,14 +12,14 @@
         .header {
             height: 700px;
             position: relative;
-            overflow: auto;
+            overflow:auto;
         }
         .header img {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position:absolute;
             opacity: 0;
-            transition:ease-in-out;
+            transition:all;
         }
         .header img.active {
             opacity: 1;
@@ -44,8 +44,7 @@
         }
         .navbar {
             overflow: hidden;
-            background-color: rgb(205, 240, 165);
-            align-items: baseline;
+            background-color: #cdf0a5;
         }
         .navbar img {
             height: 50px; /* Adjust as needed */
@@ -60,7 +59,7 @@
             text-decoration: none;
         }
         .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
+            background-color: #ffffff;
             color: black;
         }
         .dropdown {
@@ -98,22 +97,20 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .main-content {
-            background: url('Dauwoye pics/Reception.jpeg') no-repeat center fixed;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            height: 600px;
+        .content {
+            padding: 150px;
+            text-align: center;
             background-color:  #dbe9cd;
         }
         .elementor {
             border: 1px solid #dddddd;
             padding: 20px;
-            height: fit-content;
-            margin:auto;
-            display:inline-flexbox;
+            height:fit-content;
+            width:fit-content;
+            margin: 10px;
+            display:inline-flex;
             background-color: rgb(213, 240, 245);
-            border-radius: initial;
+            text-decoration: none;
         }
         .rounded {
             border-radius: 15px;
@@ -139,7 +136,7 @@
             text-align: right;
         }
         .social-icons a {
-            color: rgb(116, 147, 192);
+            color: rgb(97, 121, 196);
             margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
@@ -174,89 +171,87 @@
 </head>
 <body>
 
-<div class="navbar">
-    <img src="Dauwoye pics/dauwoye logo.jfif" alt="Logo">
-    <a href="home.html">HOME</a>
-    <div class="dropdown">
-        <button class="dropbtn">ABOUT 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="who-we-are.html">Who We Are</a>
-            <a href="our-team.html">Our Team</a>
+    <div class="navbar">
+        <img src="Dauwoye pics/logo.jpeg" alt="Logo">
+        <a href="home.html">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn">ABOUT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="who-we-are.html">Who We Are</a>
+                <a href="our-team.html">Our Team</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">OUR INFLUENCE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-campaigns.html">Our Campaigns</a>
+                <a href="overview.html">Overview</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">NEWS & UPDATES 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-partners.html">Our Partners</a>
+                <a href="reports.html">Reports</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">GET INVOLVED 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="donate.html">Donate</a>
+                <a href="partner-with-us.html">Partner With Us</a>
+                <a href="vacancies.html">Vacancies</a>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">CALL US 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">+(254)722468422</a>
+                <a href="#">@dauwoye.org.co.ke</a>
+            </div>
         </div>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn">OUR INFLUENCE 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our-campaigns.html">Our Campaigns</a>
-            <a href="overview.html">Overview</a>
-        </div>
+    <div class="header">
+        <img src="Dauwoye pics/Trainees.jpeg" class="active" alt="Slideshow Image 1">
+        <div class="overlay active"><b><i>We take a selective number of youths and walk them<br>through productive mentorship programs and training.</i></b></div>
+    
+        <img src="Dauwoye pics/Mentorship.jpeg" alt="Slideshow Image 2">
+        <div class="overlay active"><b><i>The youths are engaged in our missions and campaigns where they get<br>hands-on experience through observation and participation.</i></b></div>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn">NEWS & UPDATES 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="our-partners.html">Our Partners</a>
-            <a href="reports.html">Reports</a>
-            <a href="blogs.html">Blogs</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">GET INVOLVED 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="donate.html">Donate</a>
-            <a href="partner-with-us.html">Partner With Us</a>
-            <a href="vacancies.html">Vacancies</a>
-            <a href="volunteer.html">Volunteer</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">CALL US 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">+(254)722468422</a>
-            <a href="#">@dauwoye.org.co.ke</a>
-        </div>
-    </div>
-</div>
 
-<div class="header">
-    <img src="Dauwoye pics/women campaign.jpg" class="active" alt="Slideshow Image 1">
-    <div class="overlay active"><b><i>We take a selective number of youths and give walk them through productive mentorship programs and training.</i></b></div>
-
-    <img src="Dauwoye pics/Lab Tech.jpeg" alt="Slideshow Image 2">
-    <div class="overlay active"><b><i>The youths are engaged in our missions and campaigns where they get hands-on experience through<br> observation and participation.</i></b></div>
-
-</div>
-
-<div class="main-content">
+<div class="content">
     <div class="elementor round">
-        <img src="Dauwoye pics/Trainees.jpg" alt="Youths at the training center">
+        <img src="Dauwoye pics/Training sesh.jpg" alt="Youths at the training center">
         <h2><i>Youth Training</i></h2>
         <p>We train more than 500 youths in a year, and choose Trainers of Trainers (TOTs) from among them. The TOTs later on train other youths in the interior through mentorship sessions, and receive stipends for personal upkeep at the end of the sessions.</p>
     </div>
     <div class="elementor round">
-        <img src="Dauwoye pics/Youth.jfif" alt="Youth Program">
+        <img src="Dauwoye pics/The youths.jpg" alt="Youth Program">
         <h2><i>Youth Rights</i></h2>
         <p>We sensitize the youths on GBV matters, and also assist and link GBV victims to pro bono lawyers so that justice can be served to them.</p>
     </div>
     <div class="elementor round">
-        <img src="Dauwoye pics/Trainee awarding.jpg" alt="Youth Program">
+        <img src="Dauwoye pics/Boy child.jpg" alt="Youth Program">
         <h2><i> The Boy Child</i></h2>
-        <p>In our organization, boys are engaged through trainings on GBV and SGBV matters so that when they tranceed to mature men, the matters can be curved since they will be involved.</p>
+        <p>At DAUWOYE, young men are engaged through trainings on GBV and SGBV matters so that when they tranceed to mature men, the matters can be curved since they will be involved.</p>
     </div>
 </div>
 
 <div class="footer">
     <div class="left">
-        <p><b>You Have Question?</b>></p>
+        <p><b>You Have Question?</b></p>
         <p><b>Call or Visit Us</b></p>
         <p>+(254)722468422</p>
         <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>
@@ -286,12 +281,15 @@
 <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('.header img');
+    const overlays = document.querySelectorAll('.header .overlay');
     const totalImages = images.length;
 
     function showNextImage() {
         images[currentIndex].classList.remove('active');
+        overlays[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % totalImages;
         images[currentIndex].classList.add('active');
+        overlays[currentIndex].classList.add('active');
     }
 
     setInterval(showNextImage, 3000); // Change image every 3 seconds
