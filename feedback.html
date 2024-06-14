@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            height: 700px;
+            position: relative;
+            overflow:auto;
+        }
+        .header img {
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            opacity: 0;
+            transition:all;
+        }
+        .header img.active {
+            opacity: 1;
+        }
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            background: rgba(61, 61, 61, 0.5);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .header .overlay.active {
+            opacity: 1;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #cdf0a5;
+        }
+        .navbar img {
+            height: 50px; /* Adjust as needed */
+            margin: 5px 20px;
+        }
+        .navbar a, .dropdown .dropbtn {
+            float: left;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            text-align:right;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color:rgb(247, 247, 247);
+            color: black;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            background-color: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 150px;
+            text-align: center;
+            background-color:  #ffffff;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgb(213, 240, 245);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .form-group input[type="submit"] {
+            background-color: #35426e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+        .footer {
+            background-color: rgb(205, 240, 165);
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        .footer div {
+            flex: 1;
+        }
+        .footer .left {
+            text-align: left;
+        }
+        .footer .center {
+            text-align: center;
+        }
+        .footer .right {
+            text-align: right;
+        }
+        .social-icons a {
+            color: rgb(97, 121, 196);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .subscribe-form input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .subscribe-form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #35426e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .subscribe-form input[type="submit"]:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="Dauwoye pics/logo.jpeg" alt="Logo">
+        <a href="home.html">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn">ABOUT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="who-we-are.html">Who We Are</a>
+                <a href="our-team.html">Our Team</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">OUR INFLUENCE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-campaigns.html">Our Campaigns</a>
+                <a href="overview.html">Overview</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">NEWS & UPDATES 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="our-partners.html">Our Partners</a>
+                <a href="reports.html">Reports</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">GET INVOLVED 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="donate.html">Donate</a>
+                <a href="partner-with-us.html">Partner With Us</a>
+                <a href="vacancies.html">Vacancies</a>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">CONTACT US 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">+(254)722468422</a>
+                <a href="#">@dauwoye.org.co.ke</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+        </div>
+    </div>
+<div class="header">
+    <img src="Dauwoye pics/Main office.jpeg" class="active" alt="Slideshow Image 1">
+    <div class="overlay active"><b><i>Our main office on the third floor at Masaba Building.</i></b></div>
+
+    <img src="Dauwoye pics/Meeting.jpeg" alt="Slideshow Image 2">
+    <div class="overlay active"><b><i>Our CEO at the main office with a few members of our team.</i></b></div>
+
+</div>
+
+<div class="content">
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="left">
+        <p><b>You Have Question?</b></p>
+        <p><b>Call or Visit Us</b></p>
+        <p>+(254)722468422</p>
+        <p>Masaba Building third floor<br>Next to The Place Building<br>That houses NHIF Kisii, Kenya</p>
+        <p>info@dauwoye.org</p>
+    </div>
+    <div class="center">
+        <p><b>Newsletter</b></p>
+        <p>Get the latest news</p>
+        <div class="subscribe-form">
+            <form action="subscribe.html">
+                <input type="email" placeholder="Enter your email" required>
+                <input type="submit" value="Subscribe" style="background-color: aquamarine;">
+            </form>
+        </div>
+    </div>
+    <div class="right">
+        <p><b>Connect With Us</b></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/dauwoye.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/dauwoye?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=MtDtSNKzMEc" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dauwoye-org-b72256133/?originalSubdomain=ke" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.header img');
+    const overlays = document.querySelectorAll('.header .overlay');
+    const totalImages = images.length;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        overlays[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add('active');
+        overlays[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+
+</body>
+</html>
